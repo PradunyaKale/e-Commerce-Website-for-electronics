@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E Mart - Home</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css"
+    />
+    <link rel="stylesheet" href="styles/Home.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="name">
+        <h1>ElectraSonic</h1>
+      </div>
+      <div class="icons">
+        <a href="<%= pro_log %>"><i class="far fa-user"></i></a>
+        <select name="countries" id="countries">
+          <option value="IND">India</option>
+          <option value="USA">United States of America</option>
+          <option value="HKG">Hong Kong</option>
+          <option value="FRA">France</option>
+        </select>
+        <div class="amount flex">
+          <% if(locals.total){ %>
+          <p class="cart-price">My Cart: <br />Rs.<%= total %></p>
+          <% }else{ %>
+          <p class="cart-price">My Cart: <br />Rs.0</p>
+          <% } %>
+
+          <div class="cart flex">
+            <% if(locals.number){ %>
+            <div class="no_of_things flex"><%= number %></div>
+            <% }else{ %>
+            <div class="no_of_things flex">0</div>
+            <% } %>
+            <!-- <form action="/cart" method="post">
+              <input type="image" src="images/cart_icon.png" alt="Cart" class="cart-icon">
+            </form> -->
+            <a href="/cart"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="options flex">
+      <p><a href="#" class="Accs">New Accessories - 90% Off.</a></p>
+      <div class="opt flex">
+        <p class="app_opt">All Categories</p>
+        <i class="fas fa-angle-down"></i>
+      </div>
+      <p>New Collections</p>
+    </div>
+
+    <div class="opts">
+      <ul>
+        <li><a href="/mobile">Mobile</a></li>
+        <li><a href="/laptop">Laptop</a></li>
+        <li><a href="/tv">TV</a></li>
+        <li><a href="/headphones">Headphones</a></li>
+        <li><a href="/watch">Watch</a></li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <div class="intro">
+        <button class="discount">Daily Discounts</button>
+        <div class="main_line"><h1>The Electronic Revolution</h1></div>
+        <div class="ani_line"></div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+          reiciendis accusamus unde eius voluptas expedita quos, nesciunt
+          tempora explicabo necessitatibus aspernatur nemo repellendus molestiae
+          assumenda quod commodi odit adipisci deleniti.
+        </p>
+      </div>
+      <div class="images">
+        <img src="images/Bulb.png" alt="" />
+      </div>
+      <div class="baseline"></div>
+    </div>
+
+    <div class="sliding_apps">
+      <ul class="scroller__inner">
+        <li>
+          Mobile
+          <section>.</section>
+        </li>
+        <li>
+          Laptop
+          <section>.</section>
+        </li>
+        <li>
+          Television
+          <section>.</section>
+        </li>
+        <li>
+          Headphones
+          <section>.</section>
+        </li>
+        <li>
+          Watch
+          <section>.</section>
+        </li>
+      </ul>
+    </div>
+
+    <script src="scripts/Home-script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Order</title>
+    <link rel="stylesheet" href="styles/Checkout.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="name">
+        <h1>ElectraSonic</h1>
+      </div>
+    </nav>
+
+    <div class="box">
+      <!-- Checkout Form -->
+      <div class="checkout-form">
+        <h2>Checkout</h2>
+        <form action="/address" method="post">
+          <% if(locals.fname){ %>
+
+          <div class="form-group">
+            <label for="firstName">First Name*</label>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              value="<%= fname %>"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name*</label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              value="<%= lname %>"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="country">Country/Region*</label>
+            <select id="country" required>
+              <option value="India">India</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="address">House number and street name*</label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              value="<%= address %>"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="apartment"
+              >Apartment, suite, unit, etc. (optional)</label
+            >
+            <input
+              type="text"
+              id="apartment"
+              name="apartment"
+              value="<%= apart %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="city">Town / City*</label>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              value="<%= city %>"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="state">State*</label>
+            <select id="state" name="state" required>
+              <% if(locals.state){ %>
+              <option value="<%= state %>"><%= state %></option>
+              <% }else{ %>
+              <option value="">Select a state</option>
+              <% } %>
+              <option value="Andhra Pradesh">Andhra Pradesh</option>
+              <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+              <option value="Assam">Assam</option>
+              <option value="Bihar">Bihar</option>
+              <option value="Chhattisgarh">Chhattisgarh</option>
+              <option value="Goa">Goa</option>
+              <option value="Gujarat">Gujarat</option>
+              <option value="Haryana">Haryana</option>
+              <option value="Himachal Pradesh">Himachal Pradesh</option>
+              <option value="Jharkhand">Jharkhand</option>
+              <option value="Karnataka">Karnataka</option>
+              <option value="Kerala">Kerala</option>
+              <option value="Madhya Pradesh">Madhya Pradesh</option>
+              <option value="Maharashtra">Maharashtra</option>
+              <option value="Manipur">Manipur</option>
+              <option value="Meghalaya">Meghalaya</option>
+              <option value="Mizoram">Mizoram</option>
+              <option value="Nagaland">Nagaland</option>
+              <option value="Odisha">Odisha</option>
+              <option value="Punjab">Punjab</option>
+              <option value="Rajasthan">Rajasthan</option>
+              <option value="Sikkim">Sikkim</option>
+              <option value="Tamil Nadu">Tamil Nadu</option>
+              <option value="Telangana">Telangana</option>
+              <option value="Tripura">Tripura</option>
+              <option value="Uttar Pradesh">Uttar Pradesh</option>
+              <option value="Uttarakhand">Uttarakhand</option>
+              <option value="West Bengal">West Bengal</option>
+              <option value="Andaman and Nicobar Islands">
+                Andaman and Nicobar Islands
+              </option>
+              <option value="Chandigarh">Chandigarh</option>
+              <option value="Dadra and Nagar Haveli and Daman and Diu">
+                Dadra and Nagar Haveli and Daman and Diu
+              </option>
+              <option value="Delhi">Delhi</option>
+              <option value="Lakshadweep">Lakshadweep</option>
+              <option value="Puducherry">Puducherry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="zipCode">ZIP Code*</label>
+            <input
+              type="text"
+              id="zipCode"
+              name="zipCode"
+              value="<%= zip %>"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone*</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              value="<%= phone %>"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address*</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value="<%= email %>"
+              required
+            />
+          </div>
+          <% }else{ %>
+          <div class="form-group">
+            <label for="firstName">First Name*</label>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              value=""
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name*</label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              value=""
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="country">Country/Region*</label>
+            <select id="country" required>
+              <option value="India">India</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="address">House number and street name*</label>
+            <input type="text" id="address" name="address" value="" required />
+          </div>
+          <div class="form-group">
+            <label for="apartment"
+              >Apartment, suite, unit, etc. (optional)</label
+            >
+            <input type="text" id="apartment" name="apartment" value="" />
+          </div>
+          <div class="form-group">
+            <label for="city">Town / City*</label>
+            <input type="text" id="city" name="city" value="" required />
+          </div>
+          <div class="form-group">
+            <label for="state">State*</label>
+            <select id="state" name="state" required>
+              <% if(locals.state){ %>
+              <option value="<%= state %>"><%= state %></option>
+              <% }else{ %>
+              <option value="">Select a state</option>
+              <% } %>
+              <option value="Andhra Pradesh">Andhra Pradesh</option>
+              <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+              <option value="Assam">Assam</option>
+              <option value="Bihar">Bihar</option>
+              <option value="Chhattisgarh">Chhattisgarh</option>
+              <option value="Goa">Goa</option>
+              <option value="Gujarat">Gujarat</option>
+              <option value="Haryana">Haryana</option>
+              <option value="Himachal Pradesh">Himachal Pradesh</option>
+              <option value="Jharkhand">Jharkhand</option>
+              <option value="Karnataka">Karnataka</option>
+              <option value="Kerala">Kerala</option>
+              <option value="Madhya Pradesh">Madhya Pradesh</option>
+              <option value="Maharashtra">Maharashtra</option>
+              <option value="Manipur">Manipur</option>
+              <option value="Meghalaya">Meghalaya</option>
+              <option value="Mizoram">Mizoram</option>
+              <option value="Nagaland">Nagaland</option>
+              <option value="Odisha">Odisha</option>
+              <option value="Punjab">Punjab</option>
+              <option value="Rajasthan">Rajasthan</option>
+              <option value="Sikkim">Sikkim</option>
+              <option value="Tamil Nadu">Tamil Nadu</option>
+              <option value="Telangana">Telangana</option>
+              <option value="Tripura">Tripura</option>
+              <option value="Uttar Pradesh">Uttar Pradesh</option>
+              <option value="Uttarakhand">Uttarakhand</option>
+              <option value="West Bengal">West Bengal</option>
+              <option value="Andaman and Nicobar Islands">
+                Andaman and Nicobar Islands
+              </option>
+              <option value="Chandigarh">Chandigarh</option>
+              <option value="Dadra and Nagar Haveli and Daman and Diu">
+                Dadra and Nagar Haveli and Daman and Diu
+              </option>
+              <option value="Delhi">Delhi</option>
+              <option value="Lakshadweep">Lakshadweep</option>
+              <option value="Puducherry">Puducherry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="zipCode">ZIP Code*</label>
+            <input type="text" id="zipCode" name="zipCode" value="" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone*</label>
+            <input type="tel" id="phone" name="phone" value="" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address*</label>
+            <input type="email" id="email" name="email" value="" required />
+          </div>
+          <% } %>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <!-- Order Summary -->
+      <div class="order-summary">
+        <h2>Your Order</h2>
+        <div class="product">
+          <ul>
+            <% items.forEach(item=>{ %>
+            <li><%= item.name %></li>
+            <% }); %>
+          </ul>
+        </div>
+        <div class="subtotal">Subtotal: ₹<%= total %></div>
+        <div class="total">Total: ₹<%= total %></div>
+        <a href="/cart"><button>Cart</button></a>
+      </div>
+    </div>
+
+    <!-- Payment Options -->
+    <div class="payment-container">
+        <div class="payment-option">
+          <input
+            type="radio"
+            id="bank-transfer"
+            name="payment-method"
+            class="radio-button"
+            required
+          />
+          <label for="bank-transfer">Direct bank transfer</label>
+        </div>
+        <p class="payment-description">
+          Make your payment directly into our bank account. Please use your
+          Order ID as the payment reference. Your order will not be shipped
+          until the funds have cleared in our account.
+        </p>
+        <div class="payment-option">
+          <input
+            type="radio"
+            id="check-payment"
+            name="payment-method"
+            class="radio-button"
+            required
+          />
+          <label for="check-payment">Check payments</label>
+        </div>
+        <div class="payment-option">
+          <input
+            type="radio"
+            id="cash-on-delivery"
+            name="payment-method"
+            class="radio-button"
+            required
+          />
+          <label for="cash-on-delivery">Cash on Delivery</label>
+        </div>
+        <a href="/order"
+          ><button class="place-order-button">
+            PLACE ORDER ₹<%= total %>
+          </button></a
+        >
+    </div>
+  </body>
+</html>

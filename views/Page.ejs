@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iphone</title>
+    <link rel="stylesheet" href="styles/Page.css" />
+  </head>
+  <body>
+    <div class="main-wrap">
+      <div class="product">
+        <div class="image-gallery">
+          <img src="images/Mobile/<%= image %>" id="productImg" alt="" />
+        </div>
+        <div class="product-details">
+          <div class="details">
+            <h2><%= name %></h2>
+            <h3>₹<%= price %></h3>
+            <h4><%= disc %>% OFF</h4>
+            <p class="additional"><%= add %></p>
+            <ul>
+              <li>
+                <p class="bold">Brand:</p>
+                <p class="value"><%= brand %></p>
+              </li>
+              <li>
+                <p class="bold">Model Name:</p>
+                <p class="value"><%= model %></p>
+              </li>
+              <li>
+                <p class="bold">Operating System:</p>
+                <p class="value"><%= os %></p>
+              </li>
+              <li>
+                <p class="bold">Celllular Technology:</p>
+                <p class="value"><%= cell %></p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

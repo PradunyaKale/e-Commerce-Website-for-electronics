@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Profile</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css"
+    />
+    <link rel="stylesheet" href="styles/Profile.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="name">
+        <h1>ElectraSonic</h1>
+      </div>
+    </nav>
+
+    <div class="profile">
+      <div class="info">
+        <form action="/profile" method="post">
+          <div class="f-l-name flex">
+            <div class="Name flex">
+              <label for="fName">First Name:</label>
+              <input
+                type="text"
+                name="fName"
+                id="fName"
+                value="<%= fname %>"
+                required
+              />
+            </div>
+            <div class="Name flex">
+              <label for="lName">Last Name:</label>
+              <input
+                type="text"
+                name="lName"
+                id="lName"
+                value="<%= lname %>"
+                required
+              />
+            </div>
+          </div>
+          <div class="email-phone flex">
+            <div class="contact flex">
+              <label for="email">Email:</label>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                value="<%= email %>"
+              />
+            </div>
+            <div class="contact flex">
+              <label for="phone">Phone:</label>
+              <input type="text" name="phone" id="phone" value="<%= phone %>" />
+            </div>
+          </div>
+          <div class="add-birth flex">
+            <div class="address-date flex address">
+              <label for="address">Address:</label>
+              <input
+                type="text"
+                name="address"
+                id="address"
+                value="<%= address %>"
+              />
+            </div>
+            
+          </div>
+          <button class="save-profile" type="submit">Save Changes</button>
+        </form>
+      </div>
+
+      <div class="profile-image">
+        <div class="imagePreviewContainer" onclick="selectImage()">
+          <img id="previewImage" src="placeholder.png" alt="Image Preview" />
+        </div>
+        <button id="uploadButton" onclick="uploadImage()" disabled>
+          Upload Image
+        </button>
+        <input
+          type="file"
+          id="imageInput"
+          accept="image/*"
+          style="display: none"
+        />
+
+        <form action="/back_home" method="post">
+          <button class="shopping bt" type="submit">Back to home</button>
+        </form>
+        
+        <form action="/logout" method="post">
+          <button class="logout bt" type="submit">Log out</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="scripts/Profile-script.js"></script>
+  </body>
+</html>

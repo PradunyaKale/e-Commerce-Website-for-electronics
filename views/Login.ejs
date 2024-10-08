@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>E Mart - LogIn</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css"
+    />
+    <link rel="stylesheet" href="styles/LogIn.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="screen">
+        <div class="screen__content">
+
+          <form class="login" method="post" action="/login">
+            <div class="login__field">
+              <i class="login__icon fas fa-user"></i>
+              <input type="text" class="login__input" placeholder="User name / Email" name="username"/>
+            </div>
+            <div class="login__field">
+              <i class="login__icon fas fa-lock"></i>
+              <input type="password" class="login__input password" placeholder="Password" name="password"/>
+              <i class="fa fa-eye-slash" aria-hidden="true"></i>
+            </div>
+            <button class="button login__submit" value="submit">
+              <span class="button__text">Log In Now</span>
+              <i class="button__icon fas fa-chevron-right"></i>
+            </button>
+          </form>
+
+          <div class="social-login">
+            <a href="./register"><h3>Register</h3></a>
+          </div>
+        </div>
+        <div class="screen__background">
+          <span
+            class="screen__background__shape screen__background__shape4"
+          ></span>
+          <span
+            class="screen__background__shape screen__background__shape3"
+          ></span>
+          <span
+            class="screen__background__shape screen__background__shape2"
+          ></span>
+          <span
+            class="screen__background__shape screen__background__shape1"
+          ></span>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts/Login-script.js"></script>
+  </body>
+</html>
