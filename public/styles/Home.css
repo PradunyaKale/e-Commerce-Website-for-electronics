@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kode+Mono:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+}
+
+body{
+    background-color: black;
+}
+
+nav{
+    height: 10vh;
+    width: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+nav h1{
+    font-size: 2rem;
+    margin-left: -1.5vw;
+    position: absolute;
+    left: 43vw;
+    font-weight: 300;
+}
+
+nav .name{
+    width: 65%;
+    /* background-color: bisque; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+nav .icons{
+    height: 100%;
+    width: 35%;
+    /* background-color: brown; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+select, select option{
+    color: black;
+}
+
+/* .amount input{
+    height: 5vh;
+    width: 5vh;
+    overflow: visible;
+    margin-top: 1vh;
+} */
+
+i{
+    height: 2vh;
+    width: 2vh;
+    overflow: visible;
+}
+
+.cart{
+    /* background-color: aqua; */
+    height: 5vh;
+    width: 5vh;
+    position: relative;
+}
+
+.no_of_things{
+    background-color: blue;
+    height: 1.9vh;
+    width: 1.9vh;
+    border-radius: 4px;
+    font-size: 0.6rem;
+    position: absolute;
+    left: 1.5vw;
+    top: 0.7vh;
+    z-index: 1;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.options{
+    height: 6vh;
+    width: 100%;
+    justify-content: space-around;
+    border-top: 1px solid rgba(255, 255, 255, .15);;
+    border-bottom: 1px solid rgba(255, 255, 255, .15);
+    position: relative;
+}
+
+.Accs{
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.opt{
+    width: 15vw;
+    justify-content: space-evenly;
+    margin-right: 8vw;
+    height: 100%;
+}
+
+.opt p{
+    font-size: 1.1rem;
+}
+
+i{
+    margin-top: 0.5vh;
+    transform: rotate(0deg);
+    transition-duration: 1s;
+    transform-origin: 32% 40%;
+}
+
+.opt:hover > i{
+    transform: rotate(180deg);
+    transition-duration: 1s;
+    transform-origin: 32% 40%;
+}
+
+
+
+.opts {
+    height: 20vh;
+    width: 20vw;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    cursor: default;
+    transition-duration: 1s;
+    pointer-events: none; /* Disable pointer events when opacity is 0 */
+    z-index: 1;
+    position: absolute;
+    left: 38vw;
+  }
+  
+  .opts.show {
+    opacity: 1;
+    pointer-events: auto; /* Re-enable pointer events when visible */
+  }
+  
+  .opt:hover + .opts {
+    opacity: 1;
+    pointer-events: auto; /* Re-enable pointer events on hover */
+  }
+  
+  
+
+.opts ul {
+    list-style: none;
+}
+
+.opts ul li a{
+    color: black;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.opts ul li{
+    margin: 1.2vh 0;
+}
+
+.main{
+    /* background-color: beige; */
+    height: 83.8vh;
+    width: 100%;
+    position: absolute;
+}
+
+
+.images{
+    height: 50vh;
+    width: 40vw;
+    /* background-color: aquamarine; */
+    position: absolute;
+    top: 29vh;
+    z-index: 1;
+    right: -15vw;
+    animation: go-n-back infinite 2s;
+}
+
+.images img{
+    height: 55vh;
+}
+
+.baseline{
+    background-color: yellow;
+    height: 7vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.intro{
+    /* background-color: red; */
+    height: 50vh;
+    width: 50vw;
+    position: absolute;
+    top: 9vh;
+    left: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.intro .discount{
+    height: 5vh;
+    width: 10vw;
+    background-color: antiquewhite;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.03rem;
+}
+
+.main_line{
+    height: 10vh;
+    width: 20vw;
+    overflow: visible;
+}
+
+.services{
+    height: 5vh;
+    width: 10vw;
+    /* color: black; */
+    background-color: brown;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.01rem;
+    font-weight: bold;
+}
+
+.services i{
+    padding-bottom: 0.6vh;
+}
+
+.ani_line {
+    height: 1vh;
+    width: 10vw;
+    background-color: burlywood;
+    border-radius: 20px;
+    /* overflow: hidden; */
+}
+
+@keyframes main_line {
+    0%, 100% {
+        width: 5vw;
+        margin-left: 0;
+    }
+    25% {
+        width: 20vw;
+        margin-left: 0;
+    }
+    50% {
+        width: 5vw;
+        margin-left: 15vw;
+    }
+    75% {
+        width: 20vw;
+        margin-left: 0;
+    }
+}
+
+.ani_line {
+    animation: main_line 2s infinite;
+}
+
+.sliding_apps {
+    outline: 1px solid lime;
+    height: 7vh;
+    max-width: 30vw;
+    position: absolute;
+    left: 5vw;
+    bottom: 10vh;
+}
+
+.sliding_apps[data-animated="true"]{
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.sliding_apps[data-animated="true"] .scroller__inner{
+    flex-wrap: nowrap;
+    animation: scroll 5s linear infinite;
+    width: max-content;
+}
+
+.sliding_apps ul {
+    display: flex;
+    /* gap: 2vw; */
+    list-style: none;
+    font-family: "Bebas Neue", sans-serif;
+  }
+  
+  .sliding_apps ul li {
+    font-size: 2rem;
+    border-radius: 10px;
+    width: 16vw;
+    height: 5vh;
+    display: flex;
+    align-items: safe;
+    margin-top: 1vh;
+    cursor: default;
+  }
+
+  @keyframes scroll{
+    to{
+        transform: translate(calc(-50%));
+    }
+  }
+
+  .sliding_apps ul li section {
+    color:darksalmon;
+  }

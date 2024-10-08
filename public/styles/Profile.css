@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kode+Mono:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+body {
+  background-color: black;
+}
+
+nav {
+  height: 10vh;
+  width: 100%;
+  /* background-color: aquamarine; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+nav h1 {
+  font-size: 2rem;
+  margin-left: -1.5vw;
+  position: absolute;
+  left: 43vw;
+  font-weight: 300;
+}
+
+nav .name {
+  width: 65%;
+  /* background-color: bisque; */
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+nav .icons {
+  height: 100%;
+  width: 35%;
+  /* background-color: brown; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+select,
+select option {
+  color: black;
+}
+
+i {
+  height: 2vh;
+  width: 2vh;
+  overflow: visible;
+}
+
+.cart {
+  /* background-color: aqua; */
+  height: 5vh;
+  width: 5vh;
+  position: relative;
+}
+
+.no_of_things {
+  background-color: blue;
+  height: 1.9vh;
+  width: 1.9vh;
+  border-radius: 4px;
+  font-size: 0.6rem;
+  position: absolute;
+  left: 1.5vw;
+  top: 0.7vh;
+  z-index: 1;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.info {
+  background-color: rgb(28, 28, 28);
+  height: 70vh;
+  width: 55%;
+  margin: 5vh 0;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.profile-image {
+  background-color: rgb(12, 12, 14);
+  height: 70vh;
+  width: 35%;
+  margin: 5vh 0;
+  border-radius: 20px;
+}
+
+.f-l-name,
+.email-phone {
+  /* background-color: wheat; */
+  width: 95%;
+  height: 15vh;
+  justify-content: space-evenly;
+}
+
+.add-birth {
+  height: 30vh;
+  width: 95%;
+  /* background-color: brown; */
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.save-profile {
+  height: 5vh;
+  width: 8vw;
+  background-color: #007bff;
+  border: none;
+  border-radius: 20px;
+  margin-left: 20vw;
+  cursor: pointer;
+}
+
+.Name,
+.contact {
+  /* background-color: chocolate; */
+  height: 90%;
+  width: 45%;
+  flex-direction: column;
+  align-items: start;
+  padding-left: 2vw;
+}
+
+.info input {
+  height: 3vh;
+  width: 20vw;
+  border: none;
+  color: black;
+  padding-left: 0.5vw;
+}
+
+.address-date {
+  /* background-color: crimson; */
+  height: 10vh;
+  width: 90%;
+  flex-direction: column;
+  align-items: start;
+}
+
+.address input {
+  width: 30vw;
+}
+
+input:focus {
+  outline: none;
+  padding-left: 0.5vw;
+}
+
+.imagePreviewContainer {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+#previewImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#uploadButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10vh;
+}
+
+#uploadButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.profile-image button{
+    margin-left: 13.3vw;
+}
+
+.profile-image{
+    padding-top: 5vh;
+    height: 65vh;
+}
+
+.profile-image img{
+    background-color: gray;
+}
+
+form .bt{
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 8.7vw;
+}
